@@ -66,9 +66,9 @@ const startBox = document.getElementById("start-box");
 const s0MindshareEl = document.getElementById("season0-mindshare");
 const s1MindshareEl = document.getElementById("season1-mindshare");
 
-// === Allocation Constants ===
-const season0Pool = 0.006 * 1e10; // 0.6% of 10B
-const season1Pool = 0.004 * 1e10; // 0.4% of 10B
+// === Allocation Constants (NEW POOLS) ===
+const season0Pool = 0.0045 * 1e10; // 0.45% of 10B
+const season1Pool = 0.003 * 1e10;  // 0.3% of 10B
 
 const multipliers = {
   ideal: [0.05, 0.075],
@@ -121,6 +121,7 @@ checkBtn.onclick = async () => {
   if (isNaN(mindshare0)) mindshare0 = 0;
   if (isNaN(mindshare1)) mindshare1 = 0;
 
+  // === NEW CALCULATION ===
   allocation0 = Math.round((mindshare0 / 100) * season0Pool);
   allocation1 = Math.round((mindshare1 / 100) * season1Pool);
 
