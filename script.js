@@ -93,7 +93,7 @@ checkBtn.onclick = async () => {
 
   let s0Data = [], s1Data = [];
   try {
-    const s0Res = await fetch("top_2000_all_network.json");
+    const s0Res = await fetch("top_2000_from_network.json");
     s0Data = await s0Res.json();
   } catch {
     formError.innerText = "Couldn't load Season 0 data.";
@@ -197,14 +197,14 @@ document.getElementById("share-btn").onclick = function () {
   const mindshare1txt = s1MindshareEl.innerText.replace('Your mindshare in Season 1: ', '');
 
   const tweet =
-`Just checked my Yapper allocation for SZN 0 & 1!
+`Just checked my Yapper allocation for Mad Yaps SZN 0 & 1 by @union_build!
 
 SZN 0: ${allocation0} (${mindshare0txt})
 SZN 1: ${allocation1} (${mindshare1txt})
 
 Depending on FDV, this could be a wild ride. Mindshare matters!
 
-Check yours: https://your-yapper-calc-url`;
+Check yours: union-yappers.vercel.app`;
 
   const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweet)}`;
   window.open(url, '_blank');
@@ -212,5 +212,5 @@ Check yours: https://your-yapper-calc-url`;
 
 // === View Math Behind This ===
 document.getElementById("math-btn").onclick = function () {
-  window.open('https://twitter.com/Shinosuka_eth/status/yourmaththreadid', '_blank');
+  window.open('https://twitter.com/Shinosuka_eth/', '_blank');
 };
