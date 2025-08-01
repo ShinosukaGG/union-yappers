@@ -212,5 +212,5 @@ Check yours: union-yappers.vercel.app\n\nhttps://x.com/Shinosuka_eth/status/1951
 
 // === View Math Behind This ===
 document.getElementById("math-btn").onclick = function () {
-  window.open('https://twitter.com/Shinosuka_eth/', '_blank');
+  window.open('https://x.com/Shinosuka_eth/status/1951178957811790014?t=vhl-1K-dUMfrAQzBaGE4Ew&s=19', '_blank');
 };
