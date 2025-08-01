@@ -204,7 +204,7 @@ SZN 1: ${allocation1} (${mindshare1txt})
 
 Depending on FDV, this could be a wild ride. Mindshare matters!
 
-Check yours: union-yappers.vercel.app`;
+Check yours: union-yappers.vercel.app\n\nhttps://x.com/Shinosuka_eth/status/1951178738718089677`;
 
   const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweet)}`;
   window.open(url, '_blank');
