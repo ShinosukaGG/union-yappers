@@ -60,6 +60,7 @@ const formError = document.getElementById("form-error");
 const resultBox = document.getElementById("result-box");
 const twitterUsername = document.getElementById("twitter-username");
 const twitterPfp = document.getElementById("twitter-pfp");
+const startBox = document.getElementById("start-box");
 
 // Mindshare display elements
 const s0MindshareEl = document.getElementById("season0-mindshare");
@@ -92,7 +93,7 @@ checkBtn.onclick = async () => {
 
   let s0Data = [], s1Data = [];
   try {
-    const s0Res = await fetch("top_2000_from_network.json");
+    const s0Res = await fetch("top_2000_all_network.json");
     s0Data = await s0Res.json();
   } catch {
     formError.innerText = "Couldn't load Season 0 data.";
@@ -137,6 +138,9 @@ checkBtn.onclick = async () => {
   updateRow("s0", allocation0);
   updateRow("s1", allocation1);
 
+  // Hide the search/start box
+  startBox.classList.add("hidden");
+  // Show the results box
   resultBox.classList.remove("hidden");
   twitterUsername.innerText = "@" + username;
 
@@ -193,14 +197,14 @@ document.getElementById("share-btn").onclick = function () {
   const mindshare1txt = s1MindshareEl.innerText.replace('Your mindshare in Season 1: ', '');
 
   const tweet =
-`Just checked my Yapper allocation for Mad Yaps SZN 0 & 1 by @union_build!
+`Just checked my Yapper allocation for SZN 0 & 1!
 
 SZN 0: ${allocation0} (${mindshare0txt})
 SZN 1: ${allocation1} (${mindshare1txt})
 
 Depending on FDV, this could be a wild ride. Mindshare matters!
 
-Check yours: union-allocations.vercel.app`;
+Check yours: https://your-yapper-calc-url`;
 
   const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweet)}`;
   window.open(url, '_blank');
@@ -208,5 +212,5 @@ Check yours: union-allocations.vercel.app`;
 
 // === View Math Behind This ===
 document.getElementById("math-btn").onclick = function () {
-  window.open('', '_blank');
+  window.open('https://twitter.com/Shinosuka_eth/status/yourmaththreadid', '_blank');
 };
