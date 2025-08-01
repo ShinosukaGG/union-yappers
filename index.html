@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yapper Allocation Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-left">
+      <img src="badge3.png" alt="Yapper Logo" class="union-logo"/>
+      <span class="union-title">UNION</span>
+    </div>
+    <div class="header-center">
+      <span class="calc-title">Yapper Allocation Calculator</span>
+    </div>
+  </header>
+  <div class="header-divider"></div>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="box center-box" id="start-box">
+      <img src="allo1.png" alt="Allocation" class="allo-img"/>
+      <h1 class="box-heading">Calculate Your Mad Yaps Allocation</h1>
+      <p class="box-subheading">
+        Based on Yapper mindshare scores. Enter your Twitter username to calculate your allocation.
+      </p>
+      <input type="text" id="username" class="form-input" placeholder="Enter your Twitter username"/>
+      <div class="error-msg" id="form-error"></div>
+      <button class="primary-btn wide-btn" id="check-btn">Check Allocation</button>
+    </section>
+
+    <!-- Result Box -->
+    <section class="box center-box hidden" id="result-box">
+      <div class="result-header">
+        <img src="" alt="Twitter PFP" class="twitter-pfp" id="twitter-pfp"/>
+        <span class="twitter-username" id="twitter-username"></span>
+      </div>
+
+      <!-- Season 0 -->
+      <h2 class="result-heading">
+        Season 0 Allocation: <span id="season0-amount"></span>
+      </h2>
+      <div class="mindshare-small" id="season0-mindshare"></div>
+      <table class="result-table">
+        <tbody>
+          <tr><td class="emoji-cell"><img src="allo2.png" class="case-emoji"/></td><td class="case-label">Ideal Case</td><td class="case-fdv">$500M–$750M</td><td class="case-value" id="s0-ideal"></td></tr>
+          <tr><td class="emoji-cell"><img src="allo3.png" class="case-emoji"/></td><td class="case-label">Bull Case</td><td class="case-fdv">$750M–$1B</td><td class="case-value" id="s0-bull"></td></tr>
+          <tr><td class="emoji-cell"><img src="allo4.png" class="case-emoji"/></td><td class="case-label">Super Bull</td><td class="case-fdv">$1.2B–$1.7B</td><td class="case-value" id="s0-superbull"></td></tr>
+          <tr><td class="emoji-cell"><img src="allo5.png" class="case-emoji"/></td><td class="case-label">Giga Bull</td><td class="case-fdv">$1.7B–$2.5B</td><td class="case-value" id="s0-gigabull"></td></tr>
+        </tbody>
+      </table>
+
+      <!-- Season 1 -->
+      <h2 class="result-heading">
+        Season 1 Allocation: <span id="season1-amount"></span>
+      </h2>
+      <div class="mindshare-small" id="season1-mindshare"></div>
+      <table class="result-table">
+        <tbody>
+          <tr><td class="emoji-cell"><img src="allo2.png" class="case-emoji"/></td><td class="case-label">Ideal Case</td><td class="case-fdv">$500M–$750M</td><td class="case-value" id="s1-ideal"></td></tr>
+          <tr><td class="emoji-cell"><img src="allo3.png" class="case-emoji"/></td><td class="case-label">Bull Case</td><td class="case-fdv">$750M–$1B</td><td class="case-value" id="s1-bull"></td></tr>
+          <tr><td class="emoji-cell"><img src="allo4.png" class="case-emoji"/></td><td class="case-label">Super Bull</td><td class="case-fdv">$1.2B–$1.7B</td><td class="case-value" id="s1-superbull"></td></tr>
+          <tr><td class="emoji-cell"><img src="allo5.png" class="case-emoji"/></td><td class="case-label">Giga Bull</td><td class="case-fdv">$1.7B–$2.5B</td><td class="case-value" id="s1-gigabull"></td></tr>
+        </tbody>
+      </table>
+      <button class="primary-btn" id="share-btn">Share Your Allocation on X</button>
+<button class="grey-btn" id="math-btn">View Maths Behind This</button>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div class="footer-divider"></div>
+  <footer class="footer">
+    <span class="footer-text">Yapper allocation calculations based on Union's mindshare data.</span>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+  </html>
